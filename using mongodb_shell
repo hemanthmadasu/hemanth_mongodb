@@ -1,1 +1,5 @@
+1. in cmd after installing Mongodb_shell
+2. type Mongosh
+   you will be seeing the mongo version 
+and header changes to tool
 
