@@ -1,0 +1,22 @@
+comands for mongodb:
+ show dbs 
+show your_intended db
+use your_intended db
+show collections
+your_intended_db>db.collections.find() //shows all the data in that collection
+your_intended db>db.collections.insertOne({"name":"king","age":22,"pnnumber":1234567890,"cities":[if it is a array use []]})// insert the data in to your collections 
+your_intended db>db.collections.insertMany[({ypur data},{ypur data} ,......)] // insert many collections at one
+your_intended_db>db.collections.find().count() // it will display  the count of all 
+your_intended_db>db.collections.find().limit(3) // it will limit your results to 3 
+your_intended_db>db.collections.find().sort({name:1}) //will sort all the names in ASC order 
+your_intended_db>db.collections.find().sort({name:-1}) //will sort all the names in DSC order
+your_intended_db>db.collections.find({age:{$gt:22}}) // $gt will show all the values grater than 22
+your_intended_db>db.collections.find({age:{$lt:22}}) // $lt will show all the values less than 22
+your_intended_db>db.collections.find({age:{$gte:22}}) // $gte will show all the values grater than equaL 22
+your_intended_db>db.collections.find({age:{$lte:22}}) // $lte will show all the values less than equal 22
+your_intended_db>db.collections.find({$or: [{age:22},{salary:25000}]})// $or will produce OR command
+your_intended_db>db.collections.find({$and: [{age:22},{salary:25000}]})// $and will produce and command  
+your_intended_db>db.collections.find({age:{$in:[22,23,30]}) // $in will show all the documents with age in 22,23,30
+your_intended_db>db.collections.find({age:{$nin:[22,23,30]}) // $nin will show all the documents with age not in 22,23,30
+your_intended_db>db.collections.find({age:{$all:[11]}}) // $all will give all the data related to that perticular quiry
+db.books.updateOne({_id: ObjectId('6732970d1e3e46aa100d819b')},{$set:{age:1}}) //when you are updating perticular doc use its id and use the comnnand where 
